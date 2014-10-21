@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,31 @@ namespace Folder_Sync
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void bt1_Click(object sender, RoutedEventArgs e)
+        {
+            string sDir = "\\\\MAINFRAME\\Users\\Sid\\Airstream";
+            DirSearch(sDir);
+            
+        }
+        public void DirSearch(string sDir)
+        {
+            try
+            {
+                foreach (string d in Directory.GetDirectories(sDir))
+                {
+                    foreach (string f in Directory.GetFiles(d))
+                    {
+                        tb1.Text = tb1.Text + "\n" + f;
+                    }
+                    DirSearch(d);
+                }
+            }
+            catch (System.Exception excpt)
+            {
+               MessageBox.Show(excpt.Message);
+            }
         }
     }
 }
