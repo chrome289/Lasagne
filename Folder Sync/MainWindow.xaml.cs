@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,10 @@ using System.Windows.Shapes;
 
 namespace Folder_Sync
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        public static string sdir = "\\\\192.168.4.20\\Resource For Students\\CSE\\Sem July -Dec 2014\\B.Tech\\V Sem", ddir = "c:\\test";
+            
         public MainWindow()
         {
             InitializeComponent();
@@ -28,27 +28,60 @@ namespace Folder_Sync
 
         private void bt1_Click(object sender, RoutedEventArgs e)
         {
-            string sDir = "\\\\MAINFRAME\\Users\\Sid\\Airstream";
-            DirSearch(sDir);
+            ProcessDirectory(sdir);
+        }
+     
+        public void ProcessDirectory(string targetDirectory)
+        {
+            // Process the list of files found in the directory. 
+            string[] fileEntries = Directory.GetFiles(targetDirectory);
+            foreach (string fileName in fileEntries)
+                ProcessFile(fileName);
+
+            // Recurse into subdirectories of this directory. 
+            string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
+            foreach (string subdirectory in subdirectoryEntries)
+                ProcessDirectory(subdirectory);
             
         }
-        public void DirSearch(string sDir)
+
+        public void ProcessFile(string path)
         {
+            //create final path
+            int sdir_len=sdir.Length,path_len=path.Length;      
+            string cut_sdir_path = path.Substring(sdir_len,(path_len-sdir_len));
+            string final_path = ddir + cut_sdir_path;
+
+
             try
             {
-                foreach (string d in Directory.GetDirectories(sDir))
+                if (File.Exists(final_path) == true)
                 {
-                    foreach (string f in Directory.GetFiles(d))
+                    FileInfo f1 = new FileInfo(final_path);
+                    FileInfo f2 = new FileInfo(path);
+                    if (f1.Length != f2.Length)
                     {
-                        tb1.Text = tb1.Text + "\n" + f;
+                        Directory.CreateDirectory(System.IO.Path.GetDirectoryName(final_path));
+                        File.Copy(path, final_path, true);
+                       // tb1.Text = tb1.Text + "\n" + final_path;
                     }
-                    DirSearch(d);
+                }
+                else
+                {
+                    Directory.CreateDirectory(System.IO.Path.GetDirectoryName(final_path));
+                    File.Copy(path, final_path, true);
+                    //tb1.Text = tb1.Text + "\n" + final_path;
                 }
             }
-            catch (System.Exception excpt)
+            catch(UnauthorizedAccessException un)
             {
-               MessageBox.Show(excpt.Message);
+
             }
+        }
+
+        private void exit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
