@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 
 namespace Folder_Sync
 {
-    public partial class MainWindow : Window
+    public partial class Run_job : Window
     {
-        public static string sdir = "\\\\192.168.4.20\\Resource For Students\\CSE\\Sem July -Dec 2014\\B.Tech\\V Sem", ddir = "c:\\test";
-            
-        public MainWindow()
+        public static string sdir = "C2004:\\SD card\\Funny Pictures", ddir = "c:\\test";
+
+        public Run_job()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace Folder_Sync
         {
             ProcessDirectory(sdir);
         }
-     
+
         public void ProcessDirectory(string targetDirectory)
         {
             // Process the list of files found in the directory. 
@@ -42,14 +42,14 @@ namespace Folder_Sync
             string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
             foreach (string subdirectory in subdirectoryEntries)
                 ProcessDirectory(subdirectory);
-            
+
         }
 
         public void ProcessFile(string path)
         {
             //create final path
-            int sdir_len=sdir.Length,path_len=path.Length;      
-            string cut_sdir_path = path.Substring(sdir_len,(path_len-sdir_len));
+            int sdir_len = sdir.Length, path_len = path.Length;
+            string cut_sdir_path = path.Substring(sdir_len, (path_len - sdir_len));
             string final_path = ddir + cut_sdir_path;
 
 
@@ -63,7 +63,7 @@ namespace Folder_Sync
                     {
                         Directory.CreateDirectory(System.IO.Path.GetDirectoryName(final_path));
                         File.Copy(path, final_path, true);
-                       // tb1.Text = tb1.Text + "\n" + final_path;
+                        // tb1.Text = tb1.Text + "\n" + final_path;
                     }
                 }
                 else
@@ -73,15 +73,16 @@ namespace Folder_Sync
                     //tb1.Text = tb1.Text + "\n" + final_path;
                 }
             }
-            catch(UnauthorizedAccessException un)
+            catch (UnauthorizedAccessException un)
             {
 
             }
         }
 
-        private void exit(object sender, RoutedEventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            this.Close();
+            Main m = new Main();
+            m.Show();
         }
     }
 }
