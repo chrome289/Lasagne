@@ -1,0 +1,28 @@
+﻿<Window x:Class="Folder_Sync.Create_job"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create q Sync job" Height="467" Width="499" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid UseLayoutRounding="True">
+        <Label Content="Location of First directory" HorizontalAlignment="Left" Margin="38,26,0,0" VerticalAlignment="Top" Height="35" Width="199" FontFamily="Tahoma" FontSize="14"/>
+        <Label Content="Location of Second Directory" HorizontalAlignment="Left" Margin="38,176,0,0" VerticalAlignment="Top" Height="35" Width="199" FontFamily="Tahoma" FontSize="14"/>
+        <TextBox Name="tb1" HorizontalAlignment="Left" Height="36" Margin="38,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
+        <TextBox Name="tb2" HorizontalAlignment="Left" Height="36" Margin="38,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
+        <Grid HorizontalAlignment="Left" Height="358" Margin="161,57,0,0" VerticalAlignment="Top" Width="298">
+            <Button x:Name="bt1" Content="Browse" Margin="142,26,10,296" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="146" Height="36" FontSize="14" FontFamily="Tahoma" BorderThickness="0" Click="bt3_Click">
+                <Button.Effect>
+                    <DropShadowEffect Color="#FFE2E0E0" RenderingBias="Quality" Direction="300"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="bt2" Content="Browse" Margin="142,184,10,138" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="146" Height="36" FontSize="14" FontFamily="Tahoma" BorderThickness="0" Click="bt3_Click">
+                <Button.Effect>
+                    <DropShadowEffect Color="#FFE2E0E0" RenderingBias="Quality" Direction="300"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="bt3" Content="Create a Sync Job" Margin="21,308,147,10" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="130" Height="40" FontSize="14" FontFamily="Tahoma" BorderThickness="0" Click="bt3_Click">
+                <Button.Effect>
+                    <DropShadowEffect Color="#FFE2E0E0" RenderingBias="Quality" Direction="300"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
