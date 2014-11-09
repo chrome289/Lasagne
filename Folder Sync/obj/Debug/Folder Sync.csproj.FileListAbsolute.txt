@@ -1,0 +1,29 @@
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\Folder Sync.exe.config
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\Folder Sync.exe
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\Folder Sync.pdb
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.csprojResolveAssemblyReference.cache
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\App.g.cs
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync_MarkupCompile.cache
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.g.resources
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder_Sync.Properties.Resources.resources
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.csproj.GenerateResource.Cache
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.exe
+c:\users\sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.pdb
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Create job.baml
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Create job.g.cs
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\main.baml
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\main.g.cs
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Run job.baml
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Run job.g.cs
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Manage job.baml
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Manage job.g.cs
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\Ookii.Dialogs.Wpf.dll
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\Ookii.Dialogs.Wpf.xml
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\EntityFramework.dll
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\System.Data.SQLite.dll
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\EntityFramework.xml
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\System.Data.SQLite.xml
