@@ -28,6 +28,9 @@ namespace Folder_Sync
 
         private void bt1_Click(object sender, RoutedEventArgs e)
         {
+            string fg; string[] f = new string[2];
+            fg = datagrid1.SelectedItem.ToString();
+            f = fg.Split(new string[] { "Col3 = " }, StringSplitOptions.None);
             ProcessDirectory(sdir);
         }
 

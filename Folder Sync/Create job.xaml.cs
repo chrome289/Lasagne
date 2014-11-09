@@ -12,19 +12,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Ookii.Dialogs.Wpf;
+using System.IO;
+using System.Data.SQLite;
 
 namespace Folder_Sync
 {
-    /// <summary>
-    /// Interaction logic for Create_job.xaml
-    /// </summary>
+    
     public partial class Create_job : Window
     {
         public Create_job()
         {
             InitializeComponent();
-            tb1.Text = "Empty";
-            tb2.Text = "Empty";
+            tb1.Text = "";
+            tb2.Text = "";
+            SQLiteConnection.CreateFile("Database.sqlite");
+            SQLiteConnection dbConnection;
+            dbConnection = new SQLiteConnection("Data Source=Database.sqlite;Version=3;");
+            dbConnection.Open();
+
+            string sql = "create table if not exists sync (name varchar(100),first_folder varchar(500), second_folder varchar(500))";
+            SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+            dbConnection.Close();
         }
 
         private void bt1_Click(object sender, RoutedEventArgs e)
@@ -38,13 +47,27 @@ namespace Folder_Sync
         private void bt2_Click(object sender, RoutedEventArgs e)
         {
             VistaFolderBrowserDialog vd = new VistaFolderBrowserDialog();
-            vd.RootFolder = System.Environment.SpecialFolder.Desktop;
             vd.ShowDialog();
             tb2.Text = vd.SelectedPath;
         }
 
         private void bt3_Click(object sender, RoutedEventArgs e)
         {
+            SQLiteConnection dbConnection; 
+            dbConnection = new SQLiteConnection("Data Source=Database.sqlite;Version=3;");
+            dbConnection.Open();
+            string sql = "insert into sync (name,first_folder,second_folder) values ('"+tb3.Text+"','"+tb1.Text+"','"+tb2.Text+"')";
+            SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+            dbConnection.Close();
+            tb1.Text = "";
+            tb2.Text = "";
+            tb3.Text = "";
+            String sMessageBoxText = "Sync job saved";
+            string sCaption = "Folder Sync";
+            MessageBoxButton btnMessageBox = MessageBoxButton.OK;
+            MessageBoxImage icnMessageBox = MessageBoxImage.Information;
+            MessageBoxResult rsltMessageBox = MessageBox.Show(sMessageBoxText, sCaption, btnMessageBox, icnMessageBox);
 
         }
 
