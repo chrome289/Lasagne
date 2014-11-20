@@ -14,44 +14,82 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SQLite;
+using System.Data;
+
 
 namespace Folder_Sync
 {
     public partial class Run_job : Window
     {
-        public static string sdir = "C2004:\\SD card\\Funny Pictures", ddir = "c:\\test";
+        public static string sdir = "", ddir = "";
 
         public Run_job()
         {
             InitializeComponent();
+            SQLiteConnection m_dbConnection;
+            m_dbConnection = new SQLiteConnection("Data Source=Database.sqlite;Version=3;");
+            m_dbConnection.Open();
+            string sql = "select * from sync";
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            SQLiteDataReader reader=command.ExecuteReader();
+            while (reader.Read())
+            {
+                //MessageBox.Show(reader.GetString(1));
+                datagrid1.Items.Add(new { Col1 = reader.GetInt16(0), Col2 = reader.GetString(1), Col3 = reader.GetString(2), Col4 = reader.GetString(3) });
+            }
+            m_dbConnection.Close();
         }
 
         private void bt1_Click(object sender, RoutedEventArgs e)
         {
-            string fg; string[] f = new string[2];
-            fg = datagrid1.SelectedItem.ToString();
-            f = fg.Split(new string[] { "Col3 = " }, StringSplitOptions.None);
+            string f=datagrid1.SelectedItem.ToString();
+            string [] split=f.Split(",".ToCharArray(),4);
+            string name, first_folder, second_folder;
+            name = split[1].Substring(8);
+            first_folder = split[2].Substring(8);
+            second_folder = split[3].Substring(8);
+            second_folder=second_folder.TrimEnd(" }".ToCharArray());
+            sdir = first_folder;
+            ddir = second_folder;
             ProcessDirectory(sdir);
+            String sMessageBoxText = "Sync job completed";
+            string sCaption = "Folder Sync";
+            MessageBoxButton btnMessageBox = MessageBoxButton.OK;
+            MessageBoxImage icnMessageBox = MessageBoxImage.Information;
+            MessageBoxResult rsltMessageBox = MessageBox.Show(sMessageBoxText, sCaption, btnMessageBox, icnMessageBox);
         }
 
         public void ProcessDirectory(string targetDirectory)
         {
-            // Process the list of files found in the directory. 
-            string[] fileEntries = Directory.GetFiles(targetDirectory);
-            foreach (string fileName in fileEntries)
-                ProcessFile(fileName);
+            try
+            {
+                // Process the list of files found in the directory. 
+                string[] fileEntries = Directory.GetFiles(targetDirectory);
+                foreach (string fileName in fileEntries)
+                { ProcessFile(fileName); }
 
-            // Recurse into subdirectories of this directory. 
-            string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
-            foreach (string subdirectory in subdirectoryEntries)
-                ProcessDirectory(subdirectory);
-
+                // Recurse into subdirectories of this directory. 
+                string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
+                foreach (string subdirectory in subdirectoryEntries)
+                    ProcessDirectory(subdirectory);
+            }
+            catch(System.IO.DirectoryNotFoundException e)
+            {
+                String sMessageBoxText = "Source Folder not present";
+                string sCaption = "Folder Sync";
+                MessageBoxButton btnMessageBox = MessageBoxButton.OK;
+                MessageBoxImage icnMessageBox = MessageBoxImage.Error;
+                MessageBoxResult rsltMessageBox = MessageBox.Show(sMessageBoxText, sCaption, btnMessageBox, icnMessageBox);
+            }
+            
         }
 
         public void ProcessFile(string path)
         {
             //create final path
             int sdir_len = sdir.Length, path_len = path.Length;
+            //MessageBox.Show(sdir + "  " + sdir_len.ToString() + "     " + ddir + "        " + path + "        " + path_len.ToString());
             string cut_sdir_path = path.Substring(sdir_len, (path_len - sdir_len));
             string final_path = ddir + cut_sdir_path;
 

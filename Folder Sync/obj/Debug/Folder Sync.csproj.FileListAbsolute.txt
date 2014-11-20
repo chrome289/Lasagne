@@ -27,3 +27,8 @@ C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\D
 C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\EntityFramework.xml
 C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\System.Data.SQLite.xml
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\Folder Sync.exe.manifest
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\bin\Debug\Folder Sync.application
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.TrustInfo.xml
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.exe.manifest
+C:\Users\Sid\documents\visual studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.application

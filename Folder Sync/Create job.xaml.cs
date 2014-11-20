@@ -25,12 +25,11 @@ namespace Folder_Sync
             InitializeComponent();
             tb1.Text = "";
             tb2.Text = "";
-            SQLiteConnection.CreateFile("Database.sqlite");
             SQLiteConnection dbConnection;
             dbConnection = new SQLiteConnection("Data Source=Database.sqlite;Version=3;");
             dbConnection.Open();
 
-            string sql = "create table if not exists sync (name varchar(100),first_folder varchar(500), second_folder varchar(500))";
+            string sql = "create table if not exists sync (name varchar(100),First_Folder varchar(500), Second_Folder varchar(500))";
             SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
             command.ExecuteNonQuery();
             dbConnection.Close();
@@ -56,7 +55,7 @@ namespace Folder_Sync
             SQLiteConnection dbConnection; 
             dbConnection = new SQLiteConnection("Data Source=Database.sqlite;Version=3;");
             dbConnection.Open();
-            string sql = "insert into sync (name,first_folder,second_folder) values ('"+tb3.Text+"','"+tb1.Text+"','"+tb2.Text+"')";
+            string sql = "insert into sync (Name,First_Folder,Second_Folder) values ('"+tb3.Text+"','"+tb1.Text+"','"+tb2.Text+"')";
             SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
             command.ExecuteNonQuery();
             dbConnection.Close();
