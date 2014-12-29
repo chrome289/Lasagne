@@ -1,0 +1,63 @@
+﻿<Window x:Class="Folder_Sync.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Folder Sync" Height="401.625" Width="362.769" WindowStartupLocation="CenterScreen" Foreground="#FFBF0000" Style="{DynamicResource WindowStyle1}">
+    <Window.Resources>
+        <ControlTemplate x:Key="WindowTemplateKey" TargetType="{x:Type Window}">
+            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                <Grid>
+                    <AdornerDecorator>
+                        <ContentPresenter/>
+                    </AdornerDecorator>
+                    <ResizeGrip x:Name="WindowResizeGrip" HorizontalAlignment="Right" IsTabStop="false" Visibility="Collapsed" VerticalAlignment="Bottom"/>
+                </Grid>
+            </Border>
+            <ControlTemplate.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="ResizeMode" Value="CanResizeWithGrip"/>
+                        <Condition Property="WindowState" Value="Normal"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Visibility" TargetName="WindowResizeGrip" Value="Visible"/>
+                </MultiTrigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style x:Key="WindowStyle1" TargetType="{x:Type Window}">
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                            <AdornerDecorator>
+                                <ContentPresenter/>
+                            </AdornerDecorator>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="ResizeMode" Value="CanResizeWithGrip">
+                    <Setter Property="Template" Value="{StaticResource WindowTemplateKey}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel UseLayoutRounding="True" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="370">
+        <Button Name="bt1" Content="Create a Sync task" Margin="20,80,20,20" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="130" Height="40" FontSize="14" FontFamily="Tahoma" BorderThickness="0" Click="bt1_Click">
+            <Button.Effect>
+                <DropShadowEffect Color="#FFE2E0E0" RenderingBias="Quality" Direction="300"/>
+            </Button.Effect>
+        </Button>
+        <Button Name="bt2" Content="Manage Sync tasks" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="130" Height="40" FontSize="14" FontFamily="Tahoma" BorderThickness="0" Click="bt2_Click">
+            <Button.Effect>
+                <DropShadowEffect Color="#FFE2E0E0" RenderingBias="Quality" Direction="300"/>
+            </Button.Effect>
+        </Button>
+        <Button Name="bt3" Content="Run a Sync task" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="130" Height="40" FontSize="14" FontFamily="Tahoma" BorderThickness="0" Click="bt3_Click">
+            <Button.Effect>
+                <DropShadowEffect Color="#FFE2E0E0" RenderingBias="Quality" Direction="300"/>
+            </Button.Effect>
+        </Button>
+    </StackPanel>
+</Window>

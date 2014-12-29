@@ -1,0 +1,8 @@
+﻿<Window x:Class="Folder_Sync.Manage_task"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manage" Height="402" Width="519" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+
+    </Grid>
+</Window>
