@@ -32,3 +32,37 @@ C:\Users\Siddharth\Documents\Visual Studio 2013\Projects\Folder Sync\Folder Sync
 C:\Users\Siddharth\Documents\Visual Studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.application
 C:\Users\Siddharth\Documents\Visual Studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.exe
 C:\Users\Siddharth\Documents\Visual Studio 2013\Projects\Folder Sync\Folder Sync\obj\Debug\Folder Sync.pdb
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\Lasagne.exe.config
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\Lasagne.exe.manifest
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\Lasagne.application
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\Lasagne.exe
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\Lasagne.pdb
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\EntityFramework.dll
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\Ookii.Dialogs.Wpf.dll
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\System.Data.SQLite.dll
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\EntityFramework.xml
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\Ookii.Dialogs.Wpf.xml
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\bin\Debug\System.Data.SQLite.xml
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne.csprojResolveAssemblyReference.cache
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Create task.baml
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Main.baml
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Manage task.baml
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Run task.baml
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Create task.g.cs
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Main.g.cs
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Manage task.g.cs
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Run task.g.cs
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\App.g.cs
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne_MarkupCompile.cache
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne.g.resources
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne.Properties.Resources.resources
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne.csproj.GenerateResource.Cache
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne.TrustInfo.xml
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne.exe.manifest
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne.application
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne.exe
+C:\Users\Siddharth\documents\visual studio 2013\Projects\Lasagne\Lasagne\obj\Debug\Lasagne.pdb

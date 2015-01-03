@@ -75,5 +75,12 @@ namespace Folder_Sync
             Main m = new Main();
             m.Show();
         }
+
+
+        private void checkBox1_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
